@@ -23,3 +23,13 @@ pass_rate = len(passed) / len(scores) * 100
 print(f"Pass rate: {pass_rate:.0f}%")
 
 print(f"Needs support: {sorted(failed)}")
+
+# Distinction band: 70 or more
+distinctions = [s for s in scores if s >= 70]
+print(f"{len(distinctions)} scored 70 or more")
+
+# Average of passing scores only
+pass_average = sum(passed) / len(passed)
+print(f"Average of passing scores: {pass_average:.1f}")
+
+# Pass mark of 50: passed becomes 4 (72, 55, 91, 66, 83 -> actually 5: 72,55,91,66,83)

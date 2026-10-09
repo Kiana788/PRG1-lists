@@ -20,3 +20,20 @@ if "Flowers" in playlist:
     print("Removed Flowers by request")
 
 print(playlist)
+
+# Add a song to the end without append
+playlist += ["Golden Hour"]
+# or:
+playlist = playlist + ["Golden Hour"]
+
+# Play the next two songs in one go
+now_playing = playlist.pop(0)
+next_up = playlist.pop(0)
+print(f"Now playing: {now_playing}, next up: {next_up}")
+
+# Removing a song that is not there prints a message instead of crashing
+def remove_song(playlist, song):
+    if song in playlist:
+        playlist.remove(song)
+    else:
+        print(f"{song} is not in the queue")
